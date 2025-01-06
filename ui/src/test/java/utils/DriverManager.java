@@ -14,11 +14,10 @@ public class DriverManager {
     private Browser browser;
 
     private static final ThreadLocal<Browser> driverThreadLocal = new ThreadLocal<>();
-//    private final Logger log = LoggerFactory.getLogger(DriverManager.class);
+    private final Logger log = LoggerFactory.getLogger(DriverManager.class);
 
 
     public void createBrowser() throws IOException {
-
 
         if (getBrowser() == null) {
 
@@ -27,8 +26,6 @@ public class DriverManager {
 //            } else {
                 setLocalWebDriver();
 //            }
-//            WebDriverRunner.setWebDriver(getBrowser());
-//            WebDriverRunner.getWebDriver().manage().deleteAllCookies();//useful for AJAX pages
         }
     }
 
