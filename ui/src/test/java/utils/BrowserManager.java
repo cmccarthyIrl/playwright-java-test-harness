@@ -1,6 +1,8 @@
 package utils;
 
 import com.microsoft.playwright.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.URL;
 import java.util.List;
@@ -13,6 +15,7 @@ public class BrowserManager {
     private static final ThreadLocal<Browser> browserThreadLocal = new ThreadLocal<>();
     private static final ThreadLocal<BrowserContext> contextThreadLocal = new ThreadLocal<>();
     private static final ThreadLocal<Page> pageThreadLocal = new ThreadLocal<>();
+    private final Logger log = LoggerFactory.getLogger(BrowserManager.class);
 
     /**
      * Initializes the browser if it's not already initialized.
@@ -21,7 +24,6 @@ public class BrowserManager {
      * @param properties Properties to configure the browser setup.
      */
     public void createBrowser(Properties properties) {
-
         if (getBrowser() == null) {
             playwrightThreadLocal.set(Playwright.create());
             setLocalWebDriver(properties);  // Setup local browser (chrome/firefox)
@@ -39,8 +41,6 @@ public class BrowserManager {
         String binary = properties.getProperty("binary");
         String browserName = properties.getProperty("browser");
         String headless = properties.getProperty("headless");
-
-        System.out.println("headless = " + headless);
 
         // Choose browser based on the configuration in properties
         switch (browserName) {
@@ -73,9 +73,9 @@ public class BrowserManager {
                         .firefox()
                         .launch(new BrowserType.LaunchOptions().setHeadless(false));
             }
-            default -> throw new RuntimeException("Failed to create an instance of WebDriver for: " + binary);
+            default -> throw new RuntimeException("Failed to create an instance of WebDriver for: " + browserName);
         }
-
+        log.info("Created a browser for: " + browserName);
         // Create a browser context (isolated session)
         BrowserContext context = browser.newContext();
         // Create a new page within the context

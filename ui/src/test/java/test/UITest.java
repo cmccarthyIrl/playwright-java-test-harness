@@ -1,5 +1,7 @@
 package test;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import page.SearchPage;
 
@@ -11,6 +13,7 @@ import static org.testng.Assert.assertTrue;
 public class UITest extends BaseUITests {
 
     private SearchPage searchPage;
+    private final Logger log = LoggerFactory.getLogger(UITest.class);
 
     /**
      * This test searches for an exact book title on the automation bookstore.
@@ -27,13 +30,13 @@ public class UITest extends BaseUITests {
 
         // Navigate to the automation bookstore's homepage
         searchPage.getPage().navigate("https://automationbookstore.dev/");
-
+        log.info("The user navigated to: https://automationbookstore.dev/");
         // Perform the search for the book title
         searchPage.search(title);
-
+        log.info("The search results contained: " + searchPage.getNumberOfVisibleBooks() + " book");
         // Validate that exactly 1 book is visible in the search results
         assertEquals(searchPage.getNumberOfVisibleBooks(), 1, "Number of visible books");
-
+        log.info("The book's title is: " + searchPage.getVisibleBooks().toString());
         // Validate that the visible book's title matches the searched title
         assertTrue(searchPage.getVisibleBooks().contains(title), "Title of visible book");
     }

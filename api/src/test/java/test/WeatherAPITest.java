@@ -2,6 +2,8 @@ package test;
 
 import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.options.RequestOptions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,6 +11,7 @@ public class WeatherAPITest extends BaseAPITests {
 
     // API key for accessing the weather service
     private final String appid = "0a1b11f110d4b6cd43181d23d724cb94";
+    private final Logger log = LoggerFactory.getLogger(WeatherAPITest.class);
 
     /**
      * Test to get the weather information for Sydney.
@@ -26,7 +29,7 @@ public class WeatherAPITest extends BaseAPITests {
                         .setQueryParam("appid", appid));  // Query parameter for the API key (appid)
 
         // Print the response body to the console (useful for debugging)
-        System.out.println("RESPONSE " + response.text());
+        log.info("The weather for Sydney is: " + response.text());
 
         // Assert that the response status is OK (200-299 range)
         Assert.assertTrue(response.ok(), "Response should be OK");
@@ -55,7 +58,7 @@ public class WeatherAPITest extends BaseAPITests {
                         .setQueryParam("appid", appid));  // Query parameter for the API key (appid)
 
         // Print the response body to the console (useful for debugging)
-        System.out.println("RESPONSE " + response.text());
+        log.info("The weather for Dublin is: " + response.text());
 
         // Assert that the response status is OK (200-299 range)
         Assert.assertTrue(response.ok(), "Response should be OK");

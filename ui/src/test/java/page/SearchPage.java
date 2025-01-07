@@ -1,6 +1,8 @@
 package page;
 
 import com.microsoft.playwright.Page;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import utils.BrowserManager;
 
 import java.util.List;
@@ -19,6 +21,7 @@ public class SearchPage extends AbstractPage {
     private final String locator_hiddenBooks = "li.ui-screen-hidden";
     private String locator_visibleBooks = "li:not(.ui-screen-hidden)";
     private String locator_visibleBookTitles = "li:not(.ui-screen-hidden) h2";
+    private final Logger log = LoggerFactory.getLogger(SearchPage.class);
 
     /**
      * Constructor for SearchPage class.
@@ -39,7 +42,7 @@ public class SearchPage extends AbstractPage {
     public void search(String query) {
         clearSearchBar();  // Clear any existing search term in the search bar
         page.fill(locator_searchBar, query);  // Fill the search bar with the given query
-
+        log.info("The user search for " + query);
         // Wait for the hidden books to be attached to the DOM, indicating the search results are being updated
         var expectedState = new Page.WaitForSelectorOptions().setState(ATTACHED);
         page.waitForSelector(locator_hiddenBooks, expectedState);
@@ -50,6 +53,7 @@ public class SearchPage extends AbstractPage {
      */
     public void clearSearchBar() {
         page.fill(locator_searchBar, "");  // Clear the search bar
+        log.info("The user cleared the search field");
         var expectedState = new Page.WaitForSelectorOptions().setState(DETACHED);
         page.waitForSelector(locator_hiddenBooks, expectedState);  // Wait for the hidden books to be detached from the DOM
     }

@@ -5,16 +5,8 @@
         <groupId>playwright-java-test-harness</groupId>
         <artifactId>playwright-java-test-harness</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>ui</artifactId>
-    <name>ui</name>
-    <dependencies>
-        <dependency>
-            <groupId>playwright-java-test-harness</groupId>
-            <artifactId>common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+    <artifactId>common</artifactId>
+    <name>common</name>
 </project>

@@ -1,6 +1,6 @@
 # Playwright Automated Testing Framework
 
-[![run](https://github.com/cmccarthyIrl/spring-cucumber-testng-parallel-test-harness/actions/workflows/run.yml/badge.svg)](https://github.com/cmccarthyIrl/spring-cucumber-testng-parallel-test-harness/actions/workflows/run.yml)
+[![Playwright Automated Testing Framework](https://github.com/cmccarthyIrl/playwright-java-test-harness/actions/workflows/run.yml/badge.svg)](https://github.com/cmccarthyIrl/spring-cucumber-testng-parallel-test-harness/actions/workflows/run.yml)
 
 # Index
 <table> 
@@ -56,8 +56,6 @@ The Framework uses [Playwright](https://spring.io/guides/gs/testing-web/) and [T
             <version>7.10.2</version>
         </dependency>
 ```
-
-
 
 # Quickstart
 
@@ -130,7 +128,7 @@ The Framework uses [Log4j2](https://logging.apache.org/log4j/2.x/) You can insta
 like so
 
 ```java
-private final Logger logger=LoggerFactory.getLogger(WikipediaPageSteps.class);
+private final Logger logger=LoggerFactory.getLogger(SearchPage.class);
 ```
 
 you can then use the logger like so :
