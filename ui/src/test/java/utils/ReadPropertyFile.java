@@ -42,7 +42,6 @@ public class ReadPropertyFile {
         return properties;
     }
 
-
     /**
      * This method returns the InputStream of given file
      */

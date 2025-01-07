@@ -10,24 +10,51 @@ import static org.testng.Assert.assertTrue;
 
 public class UITest extends BaseUITests {
 
-   private SearchPage searchPage;
+    private SearchPage searchPage;
 
+    /**
+     * This test searches for an exact book title on the automation bookstore.
+     * It navigates to the site, performs a search for the given title, and validates
+     * that the correct book appears in the search results.
+     */
     @Test
     public void searchForExactTitle() {
+        // Initialize the SearchPage object with the driver manager
         searchPage = new SearchPage(getDriverManager());
+
+        // Define the title we are searching for
         String title = "Agile Testing";
+
+        // Navigate to the automation bookstore's homepage
         searchPage.getPage().navigate("https://automationbookstore.dev/");
+
+        // Perform the search for the book title
         searchPage.search(title);
+
+        // Validate that exactly 1 book is visible in the search results
         assertEquals(searchPage.getNumberOfVisibleBooks(), 1, "Number of visible books");
+
+        // Validate that the visible book's title matches the searched title
         assertTrue(searchPage.getVisibleBooks().contains(title), "Title of visible book");
     }
 
+    /**
+     * This test searches for books with partial titles and validates that the correct
+     * list of books appears in the search results. It performs a search for the term "Test"
+     * and compares the actual search results with an expected list of book titles.
+     */
     @Test
     public void searchForPartialTitle() {
+        // Initialize the SearchPage object with the driver manager
         searchPage = new SearchPage(getDriverManager());
+
+        // Navigate to the automation bookstore's homepage
         searchPage.getPage().navigate("https://automationbookstore.dev/");
+
+        // Perform the search for the partial title "Test"
         searchPage.search("Test");
 
+        // Define the expected list of book titles based on the search term
         List<String> expectedBooks = List.of(
                 "Test Automation in the Real World",
                 "Experiences of Test Automation",
@@ -36,7 +63,10 @@ public class UITest extends BaseUITests {
                 "Java For Testers"
         );
 
+        // Validate that the number of visible books matches the expected number
         assertEquals(searchPage.getNumberOfVisibleBooks(), expectedBooks.size(), "Number of visible books");
+
+        // Validate that the visible books match the expected titles
         assertEquals(searchPage.getVisibleBooks(), expectedBooks, "Titles of visible books");
     }
 }
