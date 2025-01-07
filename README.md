@@ -1,6 +1,6 @@
 # Playwright Automated Testing Framework
 
-[![Playwright Automated Testing Framework](https://github.com/cmccarthyIrl/playwright-java-test-harness/actions/workflows/run.yml/badge.svg)](https://github.com/cmccarthyIrl/spring-cucumber-testng-parallel-test-harness/actions/workflows/run.yml)
+[![Playwright Automated Testing Framework](https://github.com/cmccarthyIrl/playwright-java-test-harness/actions/workflows/run.yml/badge.svg)](https://github.com/cmccarthyIrl/playwright-java-test-harness/actions/workflows/run.yml)
 
 # Index
 <table> 
