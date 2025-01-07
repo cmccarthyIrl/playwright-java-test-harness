@@ -3,9 +3,6 @@ name: Playwright Automated Testing Framework
 on:
   pull_request:
     branches: [ "master" ]
-  push:
-    # only trigger on branches, not on tags
-    branches: ["feature/version1"]
 
 jobs:
   build:
@@ -31,4 +28,4 @@ jobs:
           ./.github/scripts/InstallChrome.sh
 
       - name: Test
-        run: mvn clean install -DactiveProfile=headless-github
+        run: mvn clean install
