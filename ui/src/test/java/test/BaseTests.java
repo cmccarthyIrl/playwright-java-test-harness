@@ -1,29 +1,31 @@
 package test;
 
-import com.microsoft.playwright.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeSuite;
-import utils.DriverManager;
+import utils.BrowserManager;
+import utils.ReadPropertyFile;
 
 import java.io.IOException;
+import java.util.Properties;
 
 public class BaseTests {
 
-    private Browser browser;
-    private final DriverManager driverManager = new DriverManager();
+    private final BrowserManager browserManager = new BrowserManager();
 
     @BeforeSuite
     public void setUp() throws IOException {
-        driverManager.createBrowser();
-        browser = driverManager.getBrowser();
+        Properties properties = new ReadPropertyFile().loadProperties("./config.properties");
+        browserManager.createBrowser(properties);
     }
 
-    public DriverManager getDriverManager(){
-        return driverManager;
+    public BrowserManager getDriverManager() {
+        return browserManager;
     }
 
     @AfterClass
     public void tearDown() {
-        browser.close();
+        browserManager.getPage().close();
+        browserManager.getBrowser().close();
+        browserManager.getPlaywright().close();
     }
 }

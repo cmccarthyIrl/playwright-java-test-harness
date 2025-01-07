@@ -5,10 +5,9 @@
         <groupId>playwright-java-test-harness</groupId>
         <artifactId>playwright-java-test-harness</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>api</artifactId>
-    <packaging>jar</packaging>
-
     <name>api</name>
 </project>

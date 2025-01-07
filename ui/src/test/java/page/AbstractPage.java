@@ -1,18 +1,18 @@
 package page;
 
 import com.microsoft.playwright.Page;
-import utils.DriverManager;
+import utils.BrowserManager;
 
 public abstract class AbstractPage {
 
-    private final Page page;
+    private final BrowserManager browserManager;
 
-    protected AbstractPage(DriverManager driverManager) {
-        page = driverManager.getBrowser().newPage();
+    protected AbstractPage(BrowserManager browserManager) {
+        this.browserManager = browserManager;
     }
 
     public Page getPage() {
-        return page;
+        return browserManager.getPage();
     }
 
 }

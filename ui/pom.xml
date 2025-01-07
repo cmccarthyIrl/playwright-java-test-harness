@@ -5,11 +5,10 @@
         <groupId>playwright-java-test-harness</groupId>
         <artifactId>playwright-java-test-harness</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>ui</artifactId>
-    <packaging>jar</packaging>
-
     <name>ui</name>
     <url>http://maven.apache.org</url>
 </project>

@@ -1,7 +1,7 @@
 package page;
 
 import com.microsoft.playwright.Page;
-import utils.DriverManager;
+import utils.BrowserManager;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,8 +20,8 @@ public class SearchPage extends AbstractPage {
     private String locator_visibleBookTitles = "li:not(.ui-screen-hidden) h2";
 
 
-    public SearchPage(DriverManager driverManager) {
-        super(driverManager);
+    public SearchPage(BrowserManager browserManager) {
+        super(browserManager);
         page = getPage();
     }
 

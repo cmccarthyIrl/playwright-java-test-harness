@@ -332,19 +332,19 @@ public class Hooks extends AbstractTestDefinition {
     @Autowired
     private HookUtil hookUtil;
     @Autowired
-    private DriverManager driverManager;
+    private DriverManager browserManager;
 
     @Before
     public void beforeScenario(Scenario scenario) {
         synchronized (lock) {
             if (!initialized) {
-                if (!driverManager.isDriverExisting()) {
-                    driverManager.downloadDriver();
+                if (!browserManager.isDriverExisting()) {
+                    browserManager.downloadDriver();
                 }
                 initialized = true;
             }
         }
-        driverManager.createDriver();
+        browserManager.createDriver();
     }
 
     @After
