@@ -7,12 +7,6 @@ import com.microsoft.playwright.Playwright;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.microsoft.playwright.APIRequestContext;
-import com.microsoft.playwright.Playwright;
-import com.microsoft.playwright.APIRequest;
-import java.util.HashMap;
-import java.util.Map;
-
 public class RequestContext {
 
     private APIRequestContext request;
