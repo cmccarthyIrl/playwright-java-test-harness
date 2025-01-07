@@ -8,7 +8,7 @@ import utils.ReadPropertyFile;
 import java.io.IOException;
 import java.util.Properties;
 
-public class BaseTests {
+public class BaseUITests {
 
     private final BrowserManager browserManager = new BrowserManager();
 
