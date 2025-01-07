@@ -21,7 +21,7 @@ public class BrowserManager {
      * @param properties Properties to configure the browser setup.
      */
     public void createBrowser(Properties properties) {
-        // Only create a new browser if one isn't already initialized
+
         if (getBrowser() == null) {
             playwrightThreadLocal.set(Playwright.create());
             setLocalWebDriver(properties);  // Setup local browser (chrome/firefox)
@@ -40,19 +40,32 @@ public class BrowserManager {
         String browserName = properties.getProperty("browser");
         String headless = properties.getProperty("headless");
 
+        System.out.println("headless = " + headless);
+
         // Choose browser based on the configuration in properties
         switch (browserName) {
             case ("chrome") -> {
                 List<String> chromeOptions = List.of(
                         "--start-maximized",
                         "--disable-gpu",
-                        "--no-sandbox"
+                        "--no-sandbox",
+                        "--disable-logging",
+                        "--disable-dev-shm-usage"
                 );
 
-                // Launch the Chrome browser with options like headless, max resolution, etc.
-                browser = playwrightThreadLocal.get().chromium().launch(new BrowserType.LaunchOptions().setHeadless(false)
-                        .setSlowMo(50)  // Slow down interactions by 50 ms
-                        .setArgs(chromeOptions));
+                if (headless.equals("true")) {
+                    // Launch the Chrome browser with options like headless, max resolution, etc.
+                    browser = playwrightThreadLocal.get().chromium().launch(new BrowserType.LaunchOptions().setHeadless(true)
+                            .setSlowMo(50)  // Slow down interactions by 50 ms
+                            .setArgs(chromeOptions));
+                } else {
+                    // Launch the Chrome browser with options like headless, max resolution, etc.
+                    browser = playwrightThreadLocal.get().chromium().launch(new BrowserType.LaunchOptions().setHeadless(false)
+                            .setSlowMo(50)  // Slow down interactions by 50 ms
+                            .setArgs(chromeOptions));
+                }
+
+
             }
             case ("firefox") -> {
                 // Launch the Firefox browser

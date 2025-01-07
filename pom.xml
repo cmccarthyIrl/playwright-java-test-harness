@@ -56,4 +56,37 @@
             <version>7.10.2</version>
         </dependency>
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <activatedProperties>dev</activatedProperties>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <activatedProperties>prod</activatedProperties>
+            </properties>
+        </profile>
+        <profile>
+            <id>uat</id>
+            <properties>
+                <activatedProperties>uat</activatedProperties>
+            </properties>
+        </profile>
+        <profile>
+            <id>cloud-provider</id>
+            <properties>
+                <activatedProperties>cloud-provider</activatedProperties>
+            </properties>
+        </profile>
+        <profile>
+            <id>headless-github</id>
+            <properties>
+                <activatedProperties>headless-github</activatedProperties>
+            </properties>
+        </profile>
+    </profiles>
 </project>
