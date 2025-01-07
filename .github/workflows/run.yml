@@ -1,4 +1,4 @@
-name: run
+name: Playwright Automated Testing Framework
 
 on:
   pull_request:
