@@ -3,6 +3,8 @@ name: Playwright Automated Testing Framework
 on:
   pull_request:
     branches: [ "master" ]
+  push:
+    branches: ["feature/version1"]
 
 jobs:
   build:
