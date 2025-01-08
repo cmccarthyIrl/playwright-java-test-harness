@@ -31,6 +31,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <logback.version>1.5.13</logback.version>
+        <maven.compiler.arguments>--add-opens jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED
+        </maven.compiler.arguments>
     </properties>
 
     <dependencies>
@@ -58,6 +60,12 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.10.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.36</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
