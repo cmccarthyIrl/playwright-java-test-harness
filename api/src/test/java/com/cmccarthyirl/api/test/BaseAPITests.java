@@ -52,8 +52,8 @@ public class BaseAPITests extends RequestContext {
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethod(Method method, ITestContext context, ITestResult iTestResult) {
-        MDC.put("logFileName", logPrefix + "-" + method.getName());
-        mdcModel.setName(logPrefix + "-" + method.getName());
+        MDC.put("logFileName", "API" + "-" + method.getName());
+        mdcModel.setName("API" + "-" + method.getName());
 
         if (ExtentTests.getTest() == null) {
             ExtentTests.createMethod(iTestResult, false);

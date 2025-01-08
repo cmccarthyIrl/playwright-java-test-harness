@@ -1,0 +1,5 @@
+[2025-01-08 11:26:07,950] [main] [com.cmccarthyirl.common.XrayTestListener] ============= Starting test: searchForPartialTitle =============
+[2025-01-08 11:26:08,196] [main] [com.cmccarthyirl.ui.page.SearchPage] The user cleared the search field
+[2025-01-08 11:26:08,260] [main] [com.cmccarthyirl.ui.page.SearchPage] The user searched for Test
+[2025-01-08 11:26:08,470] [main] [com.cmccarthyirl.ui.test.UITest] Verify the expected books were returned: [Test Automation in the Real World, Experiences of Test Automation, Agile Testing, How Google Tests Software, Java For Testers]
+[2025-01-08 11:26:08,504] [main] [com.cmccarthyirl.common.XrayTestListener] ============= Passed test: searchForPartialTitle ==============

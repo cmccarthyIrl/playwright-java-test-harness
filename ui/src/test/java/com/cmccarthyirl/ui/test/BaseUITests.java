@@ -22,7 +22,6 @@ import java.util.Properties;
 public class BaseUITests {
 
     private final MDCModel mdcModel = new MDCModel();
-    private static String logPrefix;
     // Instance of BrowserManager to handle browser setup and management
     private final PlaywrightManager playwrightManager = new PlaywrightManager();
 
@@ -43,8 +42,8 @@ public class BaseUITests {
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethod(Method method, ITestContext context, ITestResult iTestResult) {
-        MDC.put("logFileName", logPrefix + "-" + method.getName());
-        mdcModel.setName(logPrefix + "-" + method.getName());
+        MDC.put("logFileName", "UI" + "-" + method.getName());
+        mdcModel.setName("UI" + "-" + method.getName());
 
         if (ExtentTests.getTest() == null) {
             ExtentTests.createMethod(iTestResult, false);
