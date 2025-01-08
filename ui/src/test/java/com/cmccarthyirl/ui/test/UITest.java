@@ -1,19 +1,19 @@
-package test;
+package com.cmccarthyirl.ui.test;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.cmccarthyirl.common.LogManager;
+import com.cmccarthyirl.ui.page.SearchPage;
 import org.testng.annotations.Test;
-import page.SearchPage;
 
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+
 public class UITest extends BaseUITests {
 
     private SearchPage searchPage;
-    private final Logger log = LoggerFactory.getLogger(UITest.class);
+    private static final LogManager log = new LogManager(UITest.class);
 
     /**
      * This test searches for an exact book title on the automation bookstore.
@@ -66,6 +66,7 @@ public class UITest extends BaseUITests {
                 "Java For Testers"
         );
 
+        log.info("Verify the expected books were returned: " + expectedBooks);
         // Validate that the number of visible books matches the expected number
         assertEquals(searchPage.getNumberOfVisibleBooks(), expectedBooks.size(), "Number of visible books");
 

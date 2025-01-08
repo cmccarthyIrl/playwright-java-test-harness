@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <conversionRule conversionWord="colourPicker" converterClass="LogManager"/>
+    <conversionRule conversionWord="colourPicker" converterClass="com.cmccarthyirl.common.LogManager"/>
 </configuration>

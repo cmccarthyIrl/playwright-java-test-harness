@@ -1,9 +1,8 @@
-package test;
+package com.cmccarthyirl.api.test;
 
+import com.cmccarthyirl.common.LogManager;
 import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.options.RequestOptions;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,7 +10,8 @@ public class WeatherAPITest extends BaseAPITests {
 
     // API key for accessing the weather service
     private final String appid = "0a1b11f110d4b6cd43181d23d724cb94";
-    private final Logger log = LoggerFactory.getLogger(WeatherAPITest.class);
+    private static final LogManager log = new LogManager(WeatherAPITest.class);
+
 
     /**
      * Test to get the weather information for Sydney.

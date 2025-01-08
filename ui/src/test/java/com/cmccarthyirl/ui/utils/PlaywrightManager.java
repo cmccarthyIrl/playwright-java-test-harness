@@ -1,21 +1,20 @@
-package utils;
+package com.cmccarthyirl.ui.utils;
 
+import com.cmccarthyirl.common.LogManager;
 import com.microsoft.playwright.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.net.URL;
 import java.util.List;
 import java.util.Properties;
 
-public class BrowserManager {
+public class PlaywrightManager {
 
     private Browser browser;
     private static final ThreadLocal<Playwright> playwrightThreadLocal = new ThreadLocal<>();
     private static final ThreadLocal<Browser> browserThreadLocal = new ThreadLocal<>();
     private static final ThreadLocal<BrowserContext> contextThreadLocal = new ThreadLocal<>();
     private static final ThreadLocal<Page> pageThreadLocal = new ThreadLocal<>();
-    private final Logger log = LoggerFactory.getLogger(BrowserManager.class);
+    private static final LogManager log = new LogManager(PlaywrightManager.class);
 
     /**
      * Initializes the browser if it's not already initialized.

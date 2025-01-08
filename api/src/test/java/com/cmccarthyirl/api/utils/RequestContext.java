@@ -1,4 +1,4 @@
-package utils;
+package com.cmccarthyirl.api.utils;
 
 import com.microsoft.playwright.APIRequest;
 import com.microsoft.playwright.APIRequestContext;
