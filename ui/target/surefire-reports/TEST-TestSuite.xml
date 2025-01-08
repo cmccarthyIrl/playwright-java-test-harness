@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="9.118" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\craig\IdeaProjects\playwright-java-test-harness\ui\target\test-classes;C:\Users\craig\IdeaProjects\playwright-java-test-harness\ui\target\classes;C:\Users\craig\IdeaProjects\playwright-java-test-harness\common\target\common-1.0-SNAPSHOT.jar;C:\Users\craig\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\craig\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\craig\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\craig\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\craig\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\craig\.m2\repository\ch\qos\logback\logback-classic\1.5.13\logback-classic-1.5.13.jar;C:\Users\craig\.m2\repository\org\slf4j\slf4j-api\2.0.15\slf4j-api-2.0.15.jar;C:\Users\craig\.m2\repository\ch\qos\logback\logback-core\1.5.13\logback-core-1.5.13.jar;C:\Users\craig\.m2\repository\com\microsoft\playwright\playwright\1.49.0\playwright-1.49.0.jar;C:\Users\craig\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\craig\.m2\repository\com\microsoft\playwright\driver\1.49.0\driver-1.49.0.jar;C:\Users\craig\.m2\repository\com\microsoft\playwright\driver-bundle\1.49.0\driver-bundle-1.49.0.jar;C:\Users\craig\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\craig\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\craig\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\craig\.m2\repository\org\projectlombok\lombok\1.18.36\lombok-1.18.36.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Australia/Sydney"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="AU"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.11\bin"/>
+    <property name="sun.java.command" value="C:\Users\craig\AppData\Local\Temp\surefire17314246220032985849\surefirebooter-20250108142902999_3.jar C:\Users\craig\AppData\Local\Temp\surefire17314246220032985849 2025-01-08T14-29-01_632-jvmRun1 surefire-20250108142902999_1tmp surefire_0-20250108142902999_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\craig\IdeaProjects\playwright-java-test-harness\ui\target\test-classes;C:\Users\craig\IdeaProjects\playwright-java-test-harness\ui\target\classes;C:\Users\craig\IdeaProjects\playwright-java-test-harness\common\target\common-1.0-SNAPSHOT.jar;C:\Users\craig\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\craig\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\craig\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\craig\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\craig\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\craig\.m2\repository\ch\qos\logback\logback-classic\1.5.13\logback-classic-1.5.13.jar;C:\Users\craig\.m2\repository\org\slf4j\slf4j-api\2.0.15\slf4j-api-2.0.15.jar;C:\Users\craig\.m2\repository\ch\qos\logback\logback-core\1.5.13\logback-core-1.5.13.jar;C:\Users\craig\.m2\repository\com\microsoft\playwright\playwright\1.49.0\playwright-1.49.0.jar;C:\Users\craig\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\craig\.m2\repository\com\microsoft\playwright\driver\1.49.0\driver-1.49.0.jar;C:\Users\craig\.m2\repository\com\microsoft\playwright\driver-bundle\1.49.0\driver-bundle-1.49.0.jar;C:\Users\craig\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\craig\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\craig\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\craig\.m2\repository\org\projectlombok\lombok\1.18.36\lombok-1.18.36.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\craig"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17.0.11"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\craig\IdeaProjects\playwright-java-test-harness\ui"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\craig\AppData\Local\Temp\surefire17314246220032985849\surefirebooter-20250108142902999_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.11+7-LTS-207"/>
+    <property name="user.name" value="craig"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\craig\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\craig\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.11"/>
+    <property name="user.dir" value="C:\Users\craig\IdeaProjects\playwright-java-test-harness\ui"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17.0.11\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;C:\Program Files\Java\jdk-17.0.11\bin;C:\Program Files\Git\cmd;C:\Users\craig\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.11+7-LTS-207"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="searchForExactTitle" classname="com.cmccarthyirl.ui.test.UITest" time="3.593">
+    <system-err><![CDATA[SLF4J(I): Connected with provider of type [ch.qos.logback.classic.spi.LogbackServiceProvider]
+]]></system-err>
+  </testcase>
+  <testcase name="searchForPartialTitle" classname="com.cmccarthyirl.ui.test.UITest" time="0.548"/>
+</testsuite>

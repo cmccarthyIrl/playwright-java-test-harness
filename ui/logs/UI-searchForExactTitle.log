@@ -1,0 +1,7 @@
+[2025-01-08 20:24:18,319] [main] [com.cmccarthyirl.common.XrayTestListener] ============= Starting test: searchForExactTitle =============
+[2025-01-08 20:24:18,689] [main] [com.cmccarthyirl.ui.test.UITest] The user navigated to: https://automationbookstore.dev/
+[2025-01-08 20:24:18,857] [main] [com.cmccarthyirl.ui.page.SearchPage] The user cleared the search field
+[2025-01-08 20:24:18,954] [main] [com.cmccarthyirl.ui.page.SearchPage] The user searched for Agile Testing
+[2025-01-08 20:24:19,227] [main] [com.cmccarthyirl.ui.test.UITest] The search results contained: 1 book
+[2025-01-08 20:24:19,280] [main] [com.cmccarthyirl.ui.test.UITest] The book's title is: [Agile Testing]
+[2025-01-08 20:24:19,310] [main] [com.cmccarthyirl.common.XrayTestListener] ============= Passed test: searchForExactTitle ==============

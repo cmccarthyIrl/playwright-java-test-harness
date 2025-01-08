@@ -1,0 +1,3 @@
+com\cmccarthyirl\api\test\WeatherAPITest.class
+com\cmccarthyirl\api\test\BaseAPITests.class
+com\cmccarthyirl\api\utils\RequestContext.class
