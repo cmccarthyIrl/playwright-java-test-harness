@@ -147,7 +147,7 @@ The Framework uses [Extent Reports Framework](https://extentreports.com/) to gen
 
 The example below is a report generated automatically by Extent Reports open-source library.
 
-<img src="https://github.com/cmccarthyIrl/playwright-java-test-harness/blob/main/common/src/main/resources/demo/extent-report.jpg" height="400px"/>
+<img src="https://github.com/cmccarthyIrl/playwright-java-test-harness/blob/main/common/src/main/java/com/cmccarthyirl/common/demo/playwright-extent-report.png" height="400px"/>
 
 
 # License
