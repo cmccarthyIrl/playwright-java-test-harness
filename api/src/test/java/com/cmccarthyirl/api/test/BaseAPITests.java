@@ -1,10 +1,7 @@
 package com.cmccarthyirl.api.test;
 
 import com.cmccarthyirl.api.utils.RequestContext;
-import com.cmccarthyirl.common.ExtentReporter;
-import com.cmccarthyirl.common.ExtentTests;
-import com.cmccarthyirl.common.MDCModel;
-import com.cmccarthyirl.common.XrayTestListener;
+import com.cmccarthyirl.common.*;
 import com.microsoft.playwright.APIRequestContext;
 import com.microsoft.playwright.Playwright;
 import org.slf4j.MDC;
@@ -15,15 +12,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 
+import java.io.IOException;
 import java.lang.reflect.Method;
+import java.util.Properties;
 
 @Listeners({XrayTestListener.class})
 public class BaseAPITests extends RequestContext {
 
     private final MDCModel mdcModel = new MDCModel();
-    private static String logPrefix;
-
-
+    private Properties properties = new Properties();
     private static final ThreadLocal<Playwright> playwrightThreadLocal = new ThreadLocal<>();
     private APIRequestContext request;
 
@@ -32,7 +29,10 @@ public class BaseAPITests extends RequestContext {
      * It initializes the Playwright instance, which is necessary for interacting with the browser or APIs.
      */
     @BeforeSuite(alwaysRun = true)
-    public void beforeAll() {
+    public void beforeAll() throws IOException {
+        // Load the configuration properties (like browser settings, headless mode, etc based on the maven profile)
+        String configFile = System.getProperty("config.file", "default-config.properties");
+        properties = new ReadPropertyFile().loadProperties("./" + configFile);
         // Playwright instance used for managing browser and API interactions
         playwrightThreadLocal.set(Playwright.create());
     }
@@ -109,7 +109,7 @@ public class BaseAPITests extends RequestContext {
      * @return the API request context for the weather API
      */
     public APIRequestContext weatherContext() {
-        return getWeatherAPIContext(getPlaywright());
+        return getWeatherAPIContext(getPlaywright(), properties);
     }
 }
 

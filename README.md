@@ -18,6 +18,7 @@
     | <a href="#ide-support">IDE Support</a>    
     | <a href="#java-jdk">Java JDK</a>    
     | <a href="#troubleshooting">Troubleshooting</a>    |
+    | <a href="#environment-switching">Environment Switching</a>    
   </td>
 </tr>
 <tr>
@@ -95,6 +96,31 @@ To minimize the discrepancies between IDE versions and Locales the `<sourceEncod
     ...
 </properties>
 ```
+
+# Environment Switching
+
+You can specify the profile to use when running Maven from the command line like so:
+
+```
+mvn clean install -Ptest
+```
+
+Example of a maven profile
+```xml
+
+<profiles>
+    ...
+    <profile>
+      <id>test</id>
+      <properties>
+        <config.file>config-test.properties</config.file>
+      </properties>
+    </profile>
+    ...
+</profiles>
+```
+
+
 
 # Java JDK
 

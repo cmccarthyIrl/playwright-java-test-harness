@@ -1,6 +1,6 @@
-[2025-01-08 20:24:19,318] [main] [com.cmccarthyirl.common.XrayTestListener] ============= Starting test: searchForPartialTitle =============
-[2025-01-08 20:24:19,506] [main] [com.cmccarthyirl.ui.test.UITest]  The user navigated to: https://automationbookstore.dev/
-[2025-01-08 20:24:19,590] [main] [com.cmccarthyirl.ui.page.SearchPage] The user cleared the search field
-[2025-01-08 20:24:19,663] [main] [com.cmccarthyirl.ui.page.SearchPage] The user searched for Test
-[2025-01-08 20:24:19,891] [main] [com.cmccarthyirl.ui.test.UITest] Verify the expected books were returned: [Test Automation in the Real World, Experiences of Test Automation, Agile Testing, How Google Tests Software, Java For Testers]
-[2025-01-08 20:24:19,986] [main] [com.cmccarthyirl.common.XrayTestListener] ============= Passed test: searchForPartialTitle ==============
+[2025-01-09 22:10:51,024] [main] [com.cmccarthyirl.common.XrayTestListener] ============= Starting test: searchForPartialTitle =============
+[2025-01-09 22:10:51,253] [main] [com.cmccarthyirl.ui.test.UITest]  The user navigated to: https://automationbookstore.dev/
+[2025-01-09 22:10:51,350] [main] [com.cmccarthyirl.ui.page.SearchPage] The user cleared the search field
+[2025-01-09 22:10:51,443] [main] [com.cmccarthyirl.ui.page.SearchPage] The user searched for Test
+[2025-01-09 22:10:51,693] [main] [com.cmccarthyirl.ui.test.UITest] Verify the expected books were returned: [Test Automation in the Real World, Experiences of Test Automation, Agile Testing, How Google Tests Software, Java For Testers]
+[2025-01-09 22:10:51,810] [main] [com.cmccarthyirl.common.XrayTestListener] ============= Passed test: searchForPartialTitle ==============

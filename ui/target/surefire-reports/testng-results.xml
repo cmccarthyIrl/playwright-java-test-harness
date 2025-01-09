@@ -2,18 +2,18 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-08T14:29:07 AEDT" name="Surefire suite" finished-at="2025-01-08T14:29:12 AEDT" duration-ms="4757">
+  <suite started-at="2025-01-09T22:10:49 AEDT" name="Surefire suite" finished-at="2025-01-09T22:10:52 AEDT" duration-ms="2594">
     <groups>
     </groups>
-    <test started-at="2025-01-08T14:29:07 AEDT" name="Surefire test" finished-at="2025-01-08T14:29:12 AEDT" duration-ms="4757">
+    <test started-at="2025-01-09T22:10:49 AEDT" name="Surefire test" finished-at="2025-01-09T22:10:52 AEDT" duration-ms="2594">
       <class name="com.cmccarthyirl.ui.test.BaseUITests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.cmccarthyirl.ui.test.BaseUITests@782859e]" started-at="2025-01-08T14:29:03 AEDT" name="setUp" finished-at="2025-01-08T14:29:07 AEDT" duration-ms="3823" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.cmccarthyirl.ui.test.BaseUITests@5745ca0e]" started-at="2025-01-09T22:10:44 AEDT" name="setUp" finished-at="2025-01-09T22:10:49 AEDT" duration-ms="4827" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
       </class> <!-- com.cmccarthyirl.ui.test.BaseUITests -->
       <class name="com.cmccarthyirl.ui.test.UITest">
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method,org.testng.ITestContext,org.testng.ITestResult)[pri:0, instance:com.cmccarthyirl.ui.test.UITest@69504ae9]" started-at="2025-01-08T14:29:07 AEDT" name="beforeMethod" finished-at="2025-01-08T14:29:07 AEDT" duration-ms="163" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method,org.testng.ITestContext,org.testng.ITestResult)[pri:0, instance:com.cmccarthyirl.ui.test.UITest@5b7a7f33]" started-at="2025-01-09T22:10:49 AEDT" name="beforeMethod" finished-at="2025-01-09T22:10:50 AEDT" duration-ms="179" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,27 +22,23 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@53692008]]>
+                <![CDATA[org.testng.TestRunner@b9dfc5a]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=UITest.searchForExactTitle()[pri:0, instance:com.cmccarthyirl.ui.test.UITest@69504ae9] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=UITest.searchForExactTitle()[pri:0, instance:com.cmccarthyirl.ui.test.UITest@5b7a7f33] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="searchForExactTitle()[pri:0, instance:com.cmccarthyirl.ui.test.UITest@69504ae9]" started-at="2025-01-08T14:29:07 AEDT" name="searchForExactTitle" finished-at="2025-01-08T14:29:11 AEDT" duration-ms="3594" status="PASS">
+        <test-method signature="searchForExactTitle()[pri:0, instance:com.cmccarthyirl.ui.test.UITest@5b7a7f33]" started-at="2025-01-09T22:10:50 AEDT" name="searchForExactTitle" finished-at="2025-01-09T22:10:51 AEDT" duration-ms="988" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchForExactTitle -->
-        <test-method signature="searchForPartialTitle()[pri:0, instance:com.cmccarthyirl.ui.test.UITest@69504ae9]" started-at="2025-01-08T14:29:11 AEDT" name="searchForPartialTitle" finished-at="2025-01-08T14:29:11 AEDT" duration-ms="548" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchForPartialTitle -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method,org.testng.ITestContext,org.testng.ITestResult)[pri:0, instance:com.cmccarthyirl.ui.test.UITest@69504ae9]" started-at="2025-01-08T14:29:11 AEDT" name="beforeMethod" finished-at="2025-01-08T14:29:11 AEDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method,org.testng.ITestContext,org.testng.ITestResult)[pri:0, instance:com.cmccarthyirl.ui.test.UITest@5b7a7f33]" started-at="2025-01-09T22:10:51 AEDT" name="beforeMethod" finished-at="2025-01-09T22:10:51 AEDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,19 +47,23 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@53692008]]>
+                <![CDATA[org.testng.TestRunner@b9dfc5a]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=UITest.searchForPartialTitle()[pri:0, instance:com.cmccarthyirl.ui.test.UITest@69504ae9] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=UITest.searchForPartialTitle()[pri:0, instance:com.cmccarthyirl.ui.test.UITest@5b7a7f33] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.cmccarthyirl.ui.test.UITest@69504ae9]" started-at="2025-01-08T14:29:11 AEDT" name="tearDown" finished-at="2025-01-08T14:29:12 AEDT" duration-ms="426" status="PASS">
+        <test-method signature="searchForPartialTitle()[pri:0, instance:com.cmccarthyirl.ui.test.UITest@5b7a7f33]" started-at="2025-01-09T22:10:51 AEDT" name="searchForPartialTitle" finished-at="2025-01-09T22:10:51 AEDT" duration-ms="785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchForPartialTitle -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.cmccarthyirl.ui.test.UITest@5b7a7f33]" started-at="2025-01-09T22:10:51 AEDT" name="tearDown" finished-at="2025-01-09T22:10:52 AEDT" duration-ms="602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

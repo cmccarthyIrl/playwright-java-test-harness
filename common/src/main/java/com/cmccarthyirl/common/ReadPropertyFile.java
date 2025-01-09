@@ -1,4 +1,4 @@
-package com.cmccarthyirl.ui.utils;
+package com.cmccarthyirl.common;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,20 +9,7 @@ import java.util.Properties;
 public class ReadPropertyFile {
 
     /**
-     * This method return the value of given key present in property file
-     */
-    public String getProperty(String Property, String filePath) {
-        try {
-            Properties prop = loadProperties(filePath);
-            return prop.getProperty(Property);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return null;
-        }
-    }
-
-    /**
-     * This method loads the the property file
+     * This method loads the property file
      */
     public Properties loadProperties(String filePath) throws IOException {
         Properties properties = null;

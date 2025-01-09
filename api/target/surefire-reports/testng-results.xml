@@ -2,22 +2,22 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-08T14:29:17 AEDT" name="Surefire suite" finished-at="2025-01-08T14:29:18 AEDT" duration-ms="1467">
+  <suite started-at="2025-01-09T22:10:58 AEDT" name="Surefire suite" finished-at="2025-01-09T22:11:01 AEDT" duration-ms="2440">
     <groups>
     </groups>
-    <test started-at="2025-01-08T14:29:17 AEDT" name="Surefire test" finished-at="2025-01-08T14:29:18 AEDT" duration-ms="1467">
+    <test started-at="2025-01-09T22:10:58 AEDT" name="Surefire test" finished-at="2025-01-09T22:11:01 AEDT" duration-ms="2440">
       <class name="com.cmccarthyirl.api.test.BaseAPITests">
-        <test-method is-config="true" signature="beforeAll()[pri:0, instance:com.cmccarthyirl.api.test.BaseAPITests@97e93f1]" started-at="2025-01-08T14:29:14 AEDT" name="beforeAll" finished-at="2025-01-08T14:29:17 AEDT" duration-ms="3344" status="PASS">
+        <test-method is-config="true" signature="beforeAll()[pri:0, instance:com.cmccarthyirl.api.test.BaseAPITests@710636b0]" started-at="2025-01-09T22:10:54 AEDT" name="beforeAll" finished-at="2025-01-09T22:10:58 AEDT" duration-ms="4072" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeAll -->
-        <test-method is-config="true" signature="afterAll()[pri:0, instance:com.cmccarthyirl.api.test.BaseAPITests@97e93f1]" started-at="2025-01-08T14:29:18 AEDT" name="afterAll" finished-at="2025-01-08T14:29:19 AEDT" duration-ms="209" status="PASS">
+        <test-method is-config="true" signature="afterAll()[pri:0, instance:com.cmccarthyirl.api.test.BaseAPITests@710636b0]" started-at="2025-01-09T22:11:01 AEDT" name="afterAll" finished-at="2025-01-09T22:11:01 AEDT" duration-ms="283" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterAll -->
       </class> <!-- com.cmccarthyirl.api.test.BaseAPITests -->
       <class name="com.cmccarthyirl.api.test.WeatherAPITest">
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method,org.testng.ITestContext,org.testng.ITestResult)[pri:0, instance:com.cmccarthyirl.api.test.WeatherAPITest@2657d4dd]" started-at="2025-01-08T14:29:17 AEDT" name="beforeMethod" finished-at="2025-01-08T14:29:17 AEDT" duration-ms="156" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method,org.testng.ITestContext,org.testng.ITestResult)[pri:0, instance:com.cmccarthyirl.api.test.WeatherAPITest@4722ef0c]" started-at="2025-01-09T22:10:58 AEDT" name="beforeMethod" finished-at="2025-01-09T22:10:58 AEDT" duration-ms="198" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,23 +26,23 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@4fcc0416]]>
+                <![CDATA[org.testng.TestRunner@18324f97]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=WeatherAPITest.testGetWeatherForDublin()[pri:0, instance:com.cmccarthyirl.api.test.WeatherAPITest@2657d4dd] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=WeatherAPITest.testGetWeatherForDublin()[pri:0, instance:com.cmccarthyirl.api.test.WeatherAPITest@4722ef0c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="testGetWeatherForDublin()[pri:0, instance:com.cmccarthyirl.api.test.WeatherAPITest@2657d4dd]" started-at="2025-01-08T14:29:17 AEDT" name="testGetWeatherForDublin" finished-at="2025-01-08T14:29:18 AEDT" duration-ms="1176" status="PASS">
+        <test-method signature="testGetWeatherForDublin()[pri:0, instance:com.cmccarthyirl.api.test.WeatherAPITest@4722ef0c]" started-at="2025-01-09T22:10:58 AEDT" name="testGetWeatherForDublin" finished-at="2025-01-09T22:11:00 AEDT" duration-ms="1927" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetWeatherForDublin -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method,org.testng.ITestContext,org.testng.ITestResult)[pri:0, instance:com.cmccarthyirl.api.test.WeatherAPITest@2657d4dd]" started-at="2025-01-08T14:29:18 AEDT" name="beforeMethod" finished-at="2025-01-08T14:29:18 AEDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method,org.testng.ITestContext,org.testng.ITestResult)[pri:0, instance:com.cmccarthyirl.api.test.WeatherAPITest@4722ef0c]" started-at="2025-01-09T22:11:00 AEDT" name="beforeMethod" finished-at="2025-01-09T22:11:00 AEDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,19 +51,19 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@4fcc0416]]>
+                <![CDATA[org.testng.TestRunner@18324f97]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=WeatherAPITest.testGetWeatherForSydney()[pri:0, instance:com.cmccarthyirl.api.test.WeatherAPITest@2657d4dd] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=WeatherAPITest.testGetWeatherForSydney()[pri:0, instance:com.cmccarthyirl.api.test.WeatherAPITest@4722ef0c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="testGetWeatherForSydney()[pri:0, instance:com.cmccarthyirl.api.test.WeatherAPITest@2657d4dd]" started-at="2025-01-08T14:29:18 AEDT" name="testGetWeatherForSydney" finished-at="2025-01-08T14:29:18 AEDT" duration-ms="103" status="PASS">
+        <test-method signature="testGetWeatherForSydney()[pri:0, instance:com.cmccarthyirl.api.test.WeatherAPITest@4722ef0c]" started-at="2025-01-09T22:11:00 AEDT" name="testGetWeatherForSydney" finished-at="2025-01-09T22:11:01 AEDT" duration-ms="276" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetWeatherForSydney -->

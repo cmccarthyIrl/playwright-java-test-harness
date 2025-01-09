@@ -3,6 +3,8 @@ name: Playwright Automated Testing Framework
 on:
   pull_request:
     branches: [ "main" ]
+  push:
+    branches: [ "**" ]
 
 jobs:
   build:
@@ -28,4 +30,4 @@ jobs:
           ./.github/scripts/InstallChrome.sh
 
       - name: Test
-        run: mvn clean install
+        run: mvn clean install -P test

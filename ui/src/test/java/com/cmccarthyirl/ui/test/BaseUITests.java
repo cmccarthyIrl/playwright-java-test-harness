@@ -5,7 +5,7 @@ import com.cmccarthyirl.common.ExtentTests;
 import com.cmccarthyirl.common.MDCModel;
 import com.cmccarthyirl.common.XrayTestListener;
 import com.cmccarthyirl.ui.utils.PlaywrightManager;
-import com.cmccarthyirl.ui.utils.ReadPropertyFile;
+import com.cmccarthyirl.common.ReadPropertyFile;
 import org.slf4j.MDC;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -33,8 +33,9 @@ public class BaseUITests {
      */
     @BeforeSuite
     public void setUp() throws IOException {
-        // Load the configuration properties (like browser settings, headless mode, etc.)
-        Properties properties = new ReadPropertyFile().loadProperties("./config.properties");
+        // Load the configuration properties (like browser settings, headless mode, etc based on the maven profile)
+        String configFile = System.getProperty("config.file", "default-config.properties");
+        Properties properties = new ReadPropertyFile().loadProperties("./" + configFile);
 
         // Create a new browser instance using the loaded properties
         playwrightManager.createBrowser(properties);
