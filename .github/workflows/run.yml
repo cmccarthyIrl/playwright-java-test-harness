@@ -30,4 +30,4 @@ jobs:
           ./.github/scripts/InstallChrome.sh
 
       - name: Test
-        run: mvn clean install -P test
+        run: mvn clean install -Ptest
