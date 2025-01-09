@@ -20,25 +20,20 @@ import java.util.Properties;
 public class BaseAPITests extends RequestContext {
 
     private final MDCModel mdcModel = new MDCModel();
-    private Properties properties = new Properties();
     private static final ThreadLocal<Playwright> playwrightThreadLocal = new ThreadLocal<>();
-    private APIRequestContext request;
+    private static final ThreadLocal<Properties> propertiesThreadLocal = new ThreadLocal<>();
 
     /**
      * The setup method that runs before all tests in the suite.
      * It initializes the Playwright instance, which is necessary for interacting with the browser or APIs.
      */
     @BeforeSuite(alwaysRun = true)
-    public void beforeAll() throws IOException {
-        // Load the configuration properties (like browser settings, headless mode, etc based on the maven profile)
-        String configFile = System.getProperty("config.file", "default-config.properties");
-        properties = new ReadPropertyFile().loadProperties("./" + configFile);
+    public void beforeSuite() throws IOException {
         // Playwright instance used for managing browser and API interactions
         playwrightThreadLocal.set(Playwright.create());
-    }
 
-    public static Playwright getPlaywright() {
-        return playwrightThreadLocal.get();
+        // Load the configuration properties (like browser settings, headless mode, etc based on the maven profile)
+        propertiesThreadLocal.set(new ReadPropertyFile().loadProperties("./" + System.getProperty("config.file", "default-config.properties")));
     }
 
     /**
@@ -46,34 +41,16 @@ public class BaseAPITests extends RequestContext {
      * It disposes of the API request context and closes the Playwright instance.
      */
     @AfterSuite(alwaysRun = true)
-    void afterAll() {
-        try {
-            disposeAPIRequestContext();
-        } finally {
-            closePlaywright(getPlaywright());
-        }
+    public void afterAll() {
+        closePlaywright();
         ExtentReporter.extent.flush();
-    }
-
-    /**
-     * This method disposes of the current APIRequestContext, if it exists.
-     * It ensures that the resources associated with the context are released.
-     */
-    protected void disposeAPIRequestContext() {
-        if (request != null) {
-            // Dispose of the request context to free resources
-            request.dispose();
-            request = null;
-        }
     }
 
     /**
      * This method closes the Playwright instance, if it exists.
      * It ensures that any resources associated with Playwright are properly cleaned up.
-     *
-     * @param playwright The Playwright instance to close.
      */
-    protected void closePlaywright(Playwright playwright) {
+    protected void closePlaywright() {
         if (playwrightThreadLocal.get() != null) {
             playwrightThreadLocal.get().close();
             playwrightThreadLocal.remove();
@@ -109,7 +86,7 @@ public class BaseAPITests extends RequestContext {
      * @return the API request context for the weather API
      */
     public APIRequestContext weatherContext() {
-        return getWeatherAPIContext(getPlaywright(), properties);
+        return getWeatherAPIContext(playwrightThreadLocal.get(), propertiesThreadLocal.get());
     }
 }
 

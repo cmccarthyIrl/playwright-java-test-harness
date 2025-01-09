@@ -1,11 +1,7 @@
 package com.cmccarthyirl.ui.test;
 
-import com.cmccarthyirl.common.ExtentReporter;
-import com.cmccarthyirl.common.ExtentTests;
-import com.cmccarthyirl.common.MDCModel;
-import com.cmccarthyirl.common.XrayTestListener;
+import com.cmccarthyirl.common.*;
 import com.cmccarthyirl.ui.utils.PlaywrightManager;
-import com.cmccarthyirl.common.ReadPropertyFile;
 import org.slf4j.MDC;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -64,12 +60,12 @@ public class BaseUITests {
     }
 
     /**
-     * Gets the instance of the BrowserManager.
+     * Gets the instance of the getPlaywrightManager.
      * This method allows tests to access the BrowserManager for browser interactions.
      *
      * @return the BrowserManager instance
      */
-    public PlaywrightManager getDriverManager() {
+    public PlaywrightManager getPlaywrightManager() {
         return playwrightManager;
     }
 

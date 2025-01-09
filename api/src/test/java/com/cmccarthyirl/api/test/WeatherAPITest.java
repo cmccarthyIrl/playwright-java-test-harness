@@ -9,9 +9,8 @@ import org.testng.annotations.Test;
 public class WeatherAPITest extends BaseAPITests {
 
     // API key for accessing the weather service
-    private final String appid = "0a1b11f110d4b6cd43181d23d724cb94";
+    private final String appId = "0a1b11f110d4b6cd43181d23d724cb94";
     private static final LogManager log = new LogManager(WeatherAPITest.class);
-
 
     /**
      * Test to get the weather information for Sydney.
@@ -26,7 +25,7 @@ public class WeatherAPITest extends BaseAPITests {
         APIResponse response = weatherContext().get("/data/2.5/weather",
                 RequestOptions.create()
                         .setQueryParam("q", location)  // Query parameter for location
-                        .setQueryParam("appid", appid));  // Query parameter for the API key (appid)
+                        .setQueryParam("appid", appId));  // Query parameter for the API key (appid)
 
         // Print the response body to the console (useful for debugging)
         log.info("The weather for Sydney is: " + response.text());
@@ -55,7 +54,7 @@ public class WeatherAPITest extends BaseAPITests {
         APIResponse response = weatherContext().get("/data/2.5/weather",
                 RequestOptions.create()
                         .setQueryParam("q", location)  // Query parameter for location
-                        .setQueryParam("appid", appid));  // Query parameter for the API key (appid)
+                        .setQueryParam("appid", appId));  // Query parameter for the API key (appid)
 
         // Print the response body to the console (useful for debugging)
         log.info("The weather for Dublin is: " + response.text());

@@ -1,5 +1,6 @@
 com\cmccarthyirl\common\ExtentTests.class
 com\cmccarthyirl\common\LogManager.class
+com\cmccarthyirl\common\ReadPropertyFile.class
 com\cmccarthyirl\common\ExtentReporter.class
 com\cmccarthyirl\common\XrayTestListener.class
 com\cmccarthyirl\common\MDCModel.class

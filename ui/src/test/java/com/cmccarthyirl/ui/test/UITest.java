@@ -23,7 +23,7 @@ public class UITest extends BaseUITests {
     @Test
     public void searchForExactTitle() {
         // Initialize the SearchPage object with the driver manager
-        searchPage = new SearchPage(getDriverManager());
+        searchPage = new SearchPage(getPlaywrightManager());
 
         // Define the title we are searching for
         String title = "Agile Testing";
@@ -49,7 +49,7 @@ public class UITest extends BaseUITests {
     @Test
     public void searchForPartialTitle() {
         // Initialize the SearchPage object with the driver manager
-        searchPage = new SearchPage(getDriverManager());
+        searchPage = new SearchPage(getPlaywrightManager());
 
         // Navigate to the automation bookstore's homepage
         searchPage.getPage().navigate("https://automationbookstore.dev/");

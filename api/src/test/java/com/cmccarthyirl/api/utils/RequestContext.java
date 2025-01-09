@@ -10,7 +10,6 @@ import java.util.Properties;
 
 public class RequestContext {
 
-
     /**
      * This method initializes and returns an APIRequestContext for interacting with the OpenWeatherMap API.
      * It configures the base URL for the API and sets default headers for the requests.
