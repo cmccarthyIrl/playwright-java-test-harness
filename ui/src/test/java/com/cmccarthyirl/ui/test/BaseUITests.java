@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Properties;
 
-@Listeners({XrayTestListener.class})
+@Listeners({TestListener.class})
 public class BaseUITests {
 
     private final MDCModel mdcModel = new MDCModel();

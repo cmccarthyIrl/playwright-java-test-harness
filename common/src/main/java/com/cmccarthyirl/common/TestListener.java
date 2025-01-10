@@ -3,8 +3,8 @@ package com.cmccarthyirl.common;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class XrayTestListener implements ITestListener {
-    private static final LogManager logger = new LogManager(XrayTestListener.class);
+public class TestListener implements ITestListener {
+    private static final LogManager logger = new LogManager(TestListener.class);
 
     @Override
     public void onTestStart(ITestResult result) {

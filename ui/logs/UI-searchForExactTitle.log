@@ -1,7 +1,3 @@
-[2025-01-10 00:50:20,468] [main] [com.cmccarthyirl.common.XrayTestListener] ============= Starting test: searchForExactTitle =============
-[2025-01-10 00:50:23,694] [main] [com.cmccarthyirl.ui.test.UITest] The user navigated to: https://automationbookstore.dev/
-[2025-01-10 00:50:23,820] [main] [com.cmccarthyirl.ui.page.SearchPage] The user cleared the search field
-[2025-01-10 00:50:23,913] [main] [com.cmccarthyirl.ui.page.SearchPage] The user searched for Agile Testing
-[2025-01-10 00:50:24,186] [main] [com.cmccarthyirl.ui.test.UITest] The search results contained: 1 book
-[2025-01-10 00:50:24,219] [main] [com.cmccarthyirl.ui.test.UITest] The book's title is: [Agile Testing]
-[2025-01-10 00:50:24,237] [main] [com.cmccarthyirl.common.XrayTestListener] ============= Passed test: searchForExactTitle ==============
+[2025-01-10 10:01:58,396] [main] [com.cmccarthyirl.common.TestListener] ============= Starting test: searchForExactTitle =============
+[2025-01-10 10:01:58,405] [main] [com.cmccarthyirl.common.TestListener] ============= Skipped test: searchForExactTitle ==============
+[2025-01-10 10:01:58,407] [main] [com.cmccarthyirl.common.TestListener] ============= java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "properties" is null ==============
